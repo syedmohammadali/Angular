@@ -10,6 +10,7 @@ import { HighlightDirective } from './highlight.directive';
 import { ShortenPipe } from './shorten.pipe';
 import { DataServiceService } from './data-service.service';
 import { HttpModule } from '@angular/http';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

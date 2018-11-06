@@ -15,7 +15,7 @@ allowNewServer:boolean = false;
       this.allowNewServer= true;
     },2000)
   }
-
+  //comment test
   ngOnInit() {
   }
 

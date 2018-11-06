@@ -17,7 +17,6 @@ allowNewServer:boolean = false;
   }
 
   ngOnInit() {
-
   }
 
 }

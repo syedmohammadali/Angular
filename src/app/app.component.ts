@@ -11,13 +11,14 @@ import { Employee } from '../employee.model';
 export class AppComponent {
   constructor(private dataService : DataServiceService){  }
  
-  testData: string;
+  testData: Array<string>;
   
   getData(){    
     this.dataService.getData()
     .subscribe(
-       (res: Array<Employee>)=>{           
-        this.testData = res[0].City;           
+       (res: Array<Employee>)=>{  
+        console.log(res); 
+        this.testData = res[0].Cars;           
     });   
   }
 }

@@ -6,4 +6,6 @@ export class Employee {
     empname: string
     managerid: number
     salary: number
+    Cars: string[]
+
 }

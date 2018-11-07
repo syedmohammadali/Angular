@@ -1,5 +1,8 @@
 <ng4-loading-spinner> </ng4-loading-spinner>
 <h3 appHighlight>App Component</h3>
 <button class="btn btn-primary" (click)="getData()">Get Data</button>
-<input [(ngModel)]= "testData">
-{{testData}}
+<kendo-grid
+[data]="testData">
+<kendo-grid-column field="City" width="130"></kendo-grid-column>
+<kendo-grid-column field="empname" width="200"></kendo-grid-column>
+</kendo-grid>

@@ -11,6 +11,8 @@ import { ShortenPipe } from './shorten.pipe';
 import { DataServiceService } from './data-service.service';
 import { HttpModule } from '@angular/http';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { GridModule } from '@progress/kendo-angular-grid';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng4LoadingSpinnerModule.forRoot()
+    Ng4LoadingSpinnerModule.forRoot(),
+    ButtonsModule,
+    GridModule   
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

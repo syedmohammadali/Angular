@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { DataServiceService } from './data-service.service';
 import { Response } from '@angular/http';
 import { Employee } from '../employee.model';
@@ -11,12 +11,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
+  @ViewChild('f') signupForm : NgForm;
   constructor(private dataService : DataServiceService,
     private spinnerService : Ng4LoadingSpinnerService){  }
  
   testData: Employee[];
   setQues : 'pet';
-  answer: ''
+  answer: '';    
+
+  suggestUsername(form:NgForm){
+    console.log("set username");
+     form.setValue({
+       username:"sayed",
+       email:"test@test.com",
+       secret:'pet',
+       questionAnswer:'tatt'
+     });
+  }
 
   
   getData(){   
@@ -28,7 +39,7 @@ export class AppComponent  {
     });   
   }
 
-  onSubmit(form: NgForm){
-    console.log(form);
+  onSubmit(signupForm: NgForm){
+    console.log(signupForm);
   }
 }

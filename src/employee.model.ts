@@ -1,4 +1,4 @@
-export class Employee {    
+export interface Employee {    
     City :string
     DOB: string
     deptid: number
@@ -7,5 +7,4 @@ export class Employee {
     managerid: number
     salary: number
     Cars: string[]
-
 }

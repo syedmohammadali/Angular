@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataServiceService } from './data-service.service';
 import { Response } from '@angular/http';
 import { Employee } from '../employee.model';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,15 +15,20 @@ export class AppComponent  {
     private spinnerService : Ng4LoadingSpinnerService){  }
  
   testData: Employee[];
+  setQues : 'pet';
+  answer: ''
+
   
-  getData(){ 
-  
+  getData(){   
     this.dataService.getData()
     .subscribe(
        (res: Employee[])=>{    
         console.log(res); 
-        this.testData = res; 
-                
+        this.testData = res;                 
     });   
+  }
+
+  onSubmit(form: NgForm){
+    console.log(form);
   }
 }

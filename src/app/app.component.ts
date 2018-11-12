@@ -21,12 +21,17 @@ export class AppComponent  {
 
   suggestUsername(form:NgForm){
     console.log("set username");
-     form.setValue({
-       username:"sayed",
-       email:"test@test.com",
-       secret:'pet',
-       questionAnswer:'tatt'
-     });
+    //  form.setValue({
+    //    username:"sayed",
+    //    email:"test@test.com",
+    //    secret:'pet',
+    //    questionAnswer:'tatt'
+    //  });
+
+    this.signupForm.form.patchValue({
+      username:"sayed",
+      
+    });
   }
 
   
